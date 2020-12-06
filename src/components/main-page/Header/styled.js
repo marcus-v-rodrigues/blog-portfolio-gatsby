@@ -1,13 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components"
 
-
-export const GlobalStyles = createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,800&display=swap");
-  body {
-    font-family: 'Poppins';
-  }
-`
-
 export const Header = styled.header`
     height: 100px;
 `
