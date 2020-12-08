@@ -1,4 +1,5 @@
-import React from "react"
+import React, { useRef, useEffect} from 'react'
+import {TimelineMax} from "gsap"
 import { graphql } from "gatsby"
 
 import Layout from "../components/blog/Layout"
@@ -12,8 +13,24 @@ const BlogList = props => {
     const { currentPage, numPages } = props.pageContext
     const isFirst = currentPage === 1
     const isLast = currentPage === numPages
-    const prevPage = `/blog/page/${currentPage - 1}`
+    const prevPage = currentPage - 1 === 1 ? "/blog/" : `/blog/page/${currentPage - 1}`
     const nextPage = `/blog/page/${currentPage + 1}`
+
+    let postItems = useRef([])
+    postItems.current = []
+
+    let timeline = useRef()
+
+    const addToPostItems = (el) => {
+        if (el && !postItems.current.includes(el)) {
+          postItems.current.push(el)
+        }
+    }
+
+    useEffect(() => {
+        timeline.current = new TimelineMax()
+        .staggerFrom(postItems.current, 0.7, {x: -200, opacity: 0, ease: "power3"}, 0.2)
+    },[])
 
     return (
         <Layout>
@@ -26,15 +43,17 @@ const BlogList = props => {
                 fields: { slug },
             },
             }) => (
-            <PostItem
-                slug={slug}
-                background={background}
-                category={category}
-                date={date}
-                timeToRead={timeToRead}
-                title={title}
-                description={description}
-            />
+            <div ref={addToPostItems}>
+                <PostItem
+                    slug={slug}
+                    background={background}
+                    category={category}
+                    date={date}
+                    timeToRead={timeToRead}
+                    title={title}
+                    description={description}
+                />
+            </div>
             )
         )}
             <Pagination

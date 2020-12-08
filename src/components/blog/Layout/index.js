@@ -1,5 +1,6 @@
-import React from "react"
+import React from 'react'
 import PropTypes from "prop-types"
+
 import Sidebar from "../Sidebar"
 import MenuBar from "../MenuBar"
 
@@ -11,9 +12,9 @@ const Layout = ({ children }) => {
   return (
     <S.LayoutWrapper>
       <GlobalStyles />
-      <Sidebar />
+      <Sidebar/>
       <S.LayoutMain>{children}</S.LayoutMain>
-      <MenuBar />
+      <MenuBar/>
     </S.LayoutWrapper>
   )
 }

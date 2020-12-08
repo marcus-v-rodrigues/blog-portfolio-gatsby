@@ -1,6 +1,6 @@
 import React from "react"
 
-import links from "./content"
+import links from "../../content"
 
 import * as S from "./styled"
 

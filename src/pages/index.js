@@ -1,19 +1,14 @@
 import React from 'react'
-import Header from "../components/main-page/Header"
-import createGlobalStyle from 'styled-components'
+import HamburgerMenu from '../components/main-page/HamburgerMenu'
+import GlobalStyles from "../styles/global"
 
 const IndexPage = () => {
   return (
-    <GlobalStyles/>
-    <Header/>
+    <>
+      <GlobalStyles/>
+      <HamburgerMenu/>
+    </>
   )
 }
 
 export default IndexPage
-
-const GlobalStyles = createGlobalStyle`
-  @import url("https://fonts.googleapis.com/css?family=Poppins:300,400,600,800&display=swap");
-  body {
-    font-family: 'Poppins';
-  }
-`

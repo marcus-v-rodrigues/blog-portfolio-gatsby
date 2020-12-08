@@ -75,7 +75,7 @@ exports.createPages = ({ graphql, actions }) => {
       //Serve para criar as páginas com a lista dos posts existentes
       Array.from({ length: numPages }).forEach((_, index) => { 
         createPage({
-          path: `/blog/page/${index + 1}`, //O caminho das páginas da lista de posts
+          path: index === 0 ? `/blog/` : `/blog/page/${index + 1}`, //O caminho das páginas da lista de posts
           component: path.resolve(`./src/templates/blog-list.js`),
           context: { // O dado passado como contexto fica disponível em page queries como variáveis de GraphQL
             limit: postsPerPage,
