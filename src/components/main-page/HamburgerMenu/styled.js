@@ -12,7 +12,7 @@ export const HamburgerMenuWrapper = styled.div`
 `
 
 export const HamburgerMenuData = styled.div`
-    padding: 8em 0 0 2em;
+    padding: 8rem 0 0 2rem;
     text-align: left;
 `
 
@@ -24,11 +24,11 @@ export const HamburgerMenuItem = styled.li`
     padding: 0.1em 0;
     &:first-child {
         color: grey;
-        font-size: 3em;
+        font-size: 3rem;
     }   
     &:not(:first-child) {
         color: #fff;
-        font-size: 5em;
+        font-size: 5rem;
     }
     a {
         text-decoration: none;
@@ -68,10 +68,10 @@ export const Bottom = styled(Shape)`
 
 export const HamburgerMenuToggleBtn = styled.div`
     position: fixed;
-    right: 1em;
-    top: 1em;
-    margin: 1.4em;
-    padding: 1em;
+    right: 1rem;
+    top: 1rem;
+    margin: 1.4rem;
+    padding: 1rem;
     width: 40px;
     height: 24px;
     z-index: 1;
