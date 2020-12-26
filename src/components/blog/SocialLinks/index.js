@@ -6,14 +6,14 @@ import links from "./content"
 import * as S from "./styled"
 
 const SocialLinks = () => (
-  <S.SocialLinksWrapper>
-    <S.SocialLinksList>
+  <S.Wrapper>
+    <S.List>
       {links.map((link, i) => {
         const Icon = Icons[link.label]
 
         return (
-          <S.SocialLinksItem key={i}>
-            <S.SocialLinksLink
+          <S.Item key={i}>
+            <S.Link
               href={link.url}
               title={link.label}
               target="_blank"
@@ -22,12 +22,12 @@ const SocialLinks = () => (
               <S.IconWrapper>
                 <Icon />
               </S.IconWrapper>
-            </S.SocialLinksLink>
-          </S.SocialLinksItem>
+            </S.Link>
+          </S.Item>
         )
       })}
-    </S.SocialLinksList>
-  </S.SocialLinksWrapper>
+    </S.List>
+  </S.Wrapper>
 )
 
 export default SocialLinks

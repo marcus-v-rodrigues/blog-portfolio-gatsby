@@ -9,31 +9,31 @@ import { Grid } from "@styled-icons/boxicons-solid/Grid"
 import * as S from "./styled"
 
 const MenuBar = () => (
-  <S.MenuBarWrapper>
-    <S.MenuBarGroup>
-      <S.MenuBarLink to="/" title="Voltar para Home">
-        <S.MenuBarItem>
+  <S.Wrapper>
+    <S.Group>
+      <S.Link to="/" title="Voltar para Home">
+        <S.Item>
           <Home />
-        </S.MenuBarItem>
-      </S.MenuBarLink>
-      <S.MenuBarLink to="/search/" title="Pesquisar">
-        <S.MenuBarItem>
+        </S.Item>
+      </S.Link>
+      <S.Link to="/search/" title="Pesquisar">
+        <S.Item>
           <Search />
-        </S.MenuBarItem>
-      </S.MenuBarLink>
-    </S.MenuBarGroup>
-    <S.MenuBarGroup>
-      <S.MenuBarItem title="Mudar o tema">
+        </S.Item>
+      </S.Link>
+    </S.Group>
+    <S.Group>
+      <S.Item title="Mudar o tema">
         <Light />
-      </S.MenuBarItem>
-      <S.MenuBarItem title="Mudar visualização">
+      </S.Item>
+      <S.Item title="Mudar visualização">
         <Grid />
-      </S.MenuBarItem>
-      <S.MenuBarItem title="Ir para o Topo">
+      </S.Item>
+      <S.Item title="Ir para o Topo">
         <Arrow />
-      </S.MenuBarItem>
-    </S.MenuBarGroup>
-  </S.MenuBarWrapper>
+      </S.Item>
+    </S.Group>
+  </S.Wrapper>
 )
 
 export default MenuBar

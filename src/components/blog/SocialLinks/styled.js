@@ -1,20 +1,20 @@
 import styled from "styled-components"
 
-export const SocialLinksWrapper = styled.nav`
+export const Wrapper = styled.nav`
   margin: 2rem auto;
   width: 80%;
 `
 
-export const SocialLinksList = styled.ul`
+export const List = styled.ul`
   align-items: center;
   display: flex;
   justify-content: space-around;
   list-style: none;
 `
 
-export const SocialLinksItem = styled.li``
+export const Item = styled.li``
 
-export const SocialLinksLink = styled.a`
+export const Link = styled.a`
   color: #8899a6;
   text-decoration: none;
   transition: color 0.5s;

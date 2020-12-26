@@ -2,9 +2,9 @@ import styled from "styled-components"
 import { Link } from "gatsby"
 
 export const HamburgerMenuWrapper = styled.div`
-    z-index: 0;
+    z-index: 1;
     position: absolute;
-    background: #101010;
+    background: #16202c;
     height: 100vh;
     width: 100vw;
     top: -100vh;
@@ -21,7 +21,7 @@ export const HamburgerMenuList = styled.ul`
 `
 
 export const HamburgerMenuItem = styled.li`  
-    padding: 0.1em 0;
+    padding: 0.5rem 0;
     &:first-child {
         color: grey;
         font-size: 3rem;
@@ -38,19 +38,42 @@ export const HamburgerMenuItem = styled.li`
 `
 
 export const HamburgerMenuLink = styled(Link)`
-  color: #8899a6;
-  text-decoration: none;
-  transition: color 0.5s;
-  &:hover {
-    color: #1fa1f2;
-  }
+    color: #8899a6;
+    transition: color 0.5s;
+    text-decoration: none;
+    position: relative;
+    clip-path: inset(0);
+
+    &:hover {
+        color: #1fa1f2;
+    }
+
+    &::after {
+        display: block;
+        content: '';
+        height: 4px;
+        background-color: #1fa1f2;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        transform: translateX(-101%);
+    }
+    &:hover::after {
+        transition: transform 0.3s ease;
+        transform: translateX(0);
+    }
+    &.animate-out::after {
+        transition: transform 0.3s ease;
+        transform: translateX(150%);
+    }
 `
 
 const Shape = styled.span`
     position: absolute;
     right: 0;
     width: 100%;
-    height: 3px;
+    height: 5px;
+    border-radius: 10px;
     background: #fff;
 `
 
@@ -70,11 +93,10 @@ export const HamburgerMenuToggleBtn = styled.div`
     position: fixed;
     right: 1rem;
     top: 1rem;
-    margin: 1.4rem;
-    padding: 1rem;
-    width: 40px;
-    height: 24px;
-    z-index: 1;
+    margin: 1.5rem;
+    width: 3rem;
+    height: 2.3rem;
+    z-index: 2;
     transition: transform 0.2s, opacity 0.2s !important;
     will-change: transform;
     &:hover {

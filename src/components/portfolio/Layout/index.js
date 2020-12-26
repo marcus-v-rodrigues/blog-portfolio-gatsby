@@ -1,19 +1,16 @@
 import React from 'react'
 import PropTypes from "prop-types"
 
-import Sidebar from "../Sidebar"
-import MenuBar from "../MenuBar"
-
 import * as S from "./styled"
+import HamburgerMenu from "../HamburgerMenu"
 
 const Layout = ({ children }) => {
 
   return (
-    <S.Wrapper>
-      <Sidebar/>
-      <S.Main>{children}</S.Main>
-      <MenuBar/>
-    </S.Wrapper>
+    <S.LayoutWrapper>
+      <HamburgerMenu/>
+      <S.LayoutMain>{children}</S.LayoutMain>
+    </S.LayoutWrapper>
   )
 }
 

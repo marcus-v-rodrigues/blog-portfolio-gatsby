@@ -6,11 +6,11 @@ import MenuLinks from "../MenuLinks"
 import * as S from "./styled"
 
 const Sidebar = () => (
-  <S.SidebarWrapper>
+  <S.Wrapper>
     <Profile />
     <SocialLinks />
     <MenuLinks />
-  </S.SidebarWrapper>
+  </S.Wrapper>
 )
 
 export default Sidebar

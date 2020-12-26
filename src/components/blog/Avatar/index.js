@@ -17,7 +17,7 @@ const Avatar = () => {
             }
         `  
     )
-    return <S.AvatarWrapper fixed={avatarImage.childImageSharp.fixed} />
+    return <S.Wrapper fixed={avatarImage.childImageSharp.fixed} />
 }
 
 export default Avatar

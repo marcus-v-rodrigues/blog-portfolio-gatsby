@@ -5,17 +5,17 @@ import links from "../../content"
 import * as S from "./styled"
 
 const MenuLinks = () => (
-  <S.MenuLinksWrapper>
-    <S.MenuLinksList>
+  <S.Wrapper>
+    <S.List>
       {links.map((link, i) => (
-        <S.MenuLinksItem key={i}>
-          <S.MenuLinksLink to={link.url} activeClassName="active">
+        <S.Item key={i}>
+          <S.Link to={link.url} activeClassName="active">
             {link.label}
-          </S.MenuLinksLink>
-        </S.MenuLinksItem>
+          </S.Link>
+        </S.Item>
       ))}
-    </S.MenuLinksList>
-  </S.MenuLinksWrapper>
+    </S.List>
+  </S.Wrapper>
 )
 
 export default MenuLinks

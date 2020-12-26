@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-export const MenuBarWrapper = styled.aside`
+export const Wrapper = styled.aside`
   border-radius: 35px;
   background: linear-gradient(315deg, #1b2a38, #17232f);
   box-shadow:  -14px -14px 28px #121b24, 
@@ -20,16 +20,16 @@ export const MenuBarWrapper = styled.aside`
   width: 3.75rem;
 `
 
-export const MenuBarGroup = styled.div`
+export const Group = styled.div`
   display: flex;
   flex-direction: column;
 `
 
-export const MenuBarLink = styled(Link)`
+export const Link = styled(Link)`
   display: block;
 `
 
-export const MenuBarItem = styled.span`
+export const Item = styled.span`
   color: #8899a6;
   cursor: pointer;
   display: block;

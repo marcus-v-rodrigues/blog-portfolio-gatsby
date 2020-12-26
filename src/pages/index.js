@@ -1,13 +1,11 @@
 import React from 'react'
-import HamburgerMenu from '../components/main-page/HamburgerMenu'
-import GlobalStyles from "../styles/global"
+import Layout from '../components/portfolio/Layout'
+
 
 const IndexPage = () => {
   return (
-    <>
-      <GlobalStyles/>
-      <HamburgerMenu/>
-    </>
+    <Layout>
+    </Layout>
   )
 }
 

@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-export const PostItemLink = styled(Link)`
+export const Link = styled(Link)`
   width:94%;
   margin: 0 0 1rem 3%;
   color: #8899a6;
@@ -12,7 +12,7 @@ export const PostItemLink = styled(Link)`
   }
 `
 
-export const PostItemWrapper = styled.section`
+export const Wrapper = styled.section`
   border-radius: 35px;
   background: #192734;
   box-shadow: inset -7px 7px 14px #121b24, 
@@ -24,7 +24,7 @@ export const PostItemWrapper = styled.section`
   width: 100%;
 `
 
-export const PostItemTag = styled.div`
+export const Tag = styled.div`
   align-items: center;
   background: ${props => (props.background ? props.background : "#1fa1f2")};
   border-radius: 50%;
@@ -38,23 +38,23 @@ export const PostItemTag = styled.div`
   text-transform: uppercase;
 `
 
-export const PostItemInfo = styled.div`
+export const Info = styled.div`
   display: flex;
   flex-direction: column;
   margin-left: 1.5rem;
 `
 
-export const PostItemDate = styled.time`
+export const Date = styled.time`
   font-size: 0.9rem;
 `
 
-export const PostItemTitle = styled.h1`
+export const Title = styled.h1`
   font-size: 1.6rem;
   font-weight: 700;
   margin: 0.2rem 0 0.5rem;
 `
 
-export const PostItemDescription = styled.p`
+export const Description = styled.p`
   font-size: 1.2rem;
   font-weight: 300;
   line-height: 1.2;

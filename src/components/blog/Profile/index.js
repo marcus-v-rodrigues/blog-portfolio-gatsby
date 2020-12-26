@@ -3,19 +3,19 @@ import Avatar from "../Avatar"
 import * as S from "./styled"
 
 const Profile = () => ( 
-    <S.ProfileWrapper>
-        <S.ProfileLink>
+    <S.Wrapper>
+        <S.Link>
             <Avatar />
-            <S.ProfileAuthor>
+            <S.Author>
                 <h1>Marcus Rodrigues</h1>
-                <S.ProfilePosition>
+                <S.Position>
                     <h2>Cientista da Computação</h2>
-                </S.ProfilePosition>
-            </S.ProfileAuthor>
-        </S.ProfileLink>
+                </S.Position>
+            </S.Author>
+        </S.Link>
         
         <p>Muitas ideias, mas poucas vontades de executá-las.</p>
-    </S.ProfileWrapper>
+    </S.Wrapper>
 )
 
 export default Profile

@@ -20,7 +20,7 @@ const HamburgerMenu = () => {
 
     let timeline = useRef()
     //let timeline = useState(new TimelineMax({paused: true})) //Outra possibilidade
-    const [menuExpanded, setMenuExpanded] = React.useState(false)
+    const [menuExpanded, setMenuExpanded] = useState(false)
 
     useEffect(()=>{
         timeline.current = new TimelineMax({paused: true})
@@ -34,7 +34,7 @@ const HamburgerMenu = () => {
             ease: "power3"
         }, 0)
         .to(lineThree.current, 0.8, {
-            y: -16,
+            y: -21,
             rotation: -45,
             ease: "power3",
         }, 0)
@@ -49,8 +49,25 @@ const HamburgerMenu = () => {
 
     useEffect(() => {
         //timeline.current.reversed(!menuExpanded) //Outra possibilidade
-        menuExpanded === true ? timeline.current.play() : timeline.current.reverse();
+        menuExpanded === true ? timeline.current.play() : timeline.current.reverse()
     },[menuExpanded])    
+
+    useEffect(() => {
+        const node = menuItems.current
+        node.forEach(link => {
+            const sector = link.querySelector('a')
+            sector.addEventListener('mouseleave', e => {
+    
+                // add class
+                sector.classList.add('animate-out')
+    
+            })
+            sector.ontransitionend = function() {
+                //remove class
+                sector.classList.remove('animate-out')
+            }
+        })   
+    },[menuItems.current])
 
     return (
         <>
@@ -66,9 +83,9 @@ const HamburgerMenu = () => {
                             <S.HamburgerMenuItem>Navegação</S.HamburgerMenuItem>
                             {links.map((link, index) => (
                                 <S.HamburgerMenuItem key={index} ref={addToMenuItems}>
-                                <S.HamburgerMenuLink to={link.url}>
-                                    {link.label}
-                                </S.HamburgerMenuLink>
+                                    <S.HamburgerMenuLink to={link.url}>
+                                        {link.label}
+                                    </S.HamburgerMenuLink>
                                 </S.HamburgerMenuItem>
                             ))}
                     </S.HamburgerMenuList>

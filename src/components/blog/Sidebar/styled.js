@@ -1,6 +1,6 @@
 import styled from "styled-components"
 
-export const SidebarWrapper = styled.aside`
+export const Wrapper = styled.aside`
   border-radius: 35px;
   background: linear-gradient(45deg, #1b2a38, #17232f);
   box-shadow:  14px -14px 28px #121b24, 
