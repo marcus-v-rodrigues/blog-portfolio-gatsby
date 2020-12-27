@@ -4,7 +4,7 @@ import * as S from "./styled"
 
 const Profile = () => ( 
     <S.Wrapper>
-        <S.Link>
+        <S.ProfileLink>
             <Avatar />
             <S.Author>
                 <h1>Marcus Rodrigues</h1>
@@ -12,7 +12,7 @@ const Profile = () => (
                     <h2>Cientista da Computação</h2>
                 </S.Position>
             </S.Author>
-        </S.Link>
+        </S.ProfileLink>
         
         <p>Muitas ideias, mas poucas vontades de executá-las.</p>
     </S.Wrapper>

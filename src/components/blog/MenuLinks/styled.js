@@ -15,7 +15,7 @@ export const Item = styled.li`
   }
 `
 
-export const Link = styled(Link)`
+export const MenuLink = styled(Link)`
   color: #8899a6;
   text-decoration: none;
   transition: color 0.5s;

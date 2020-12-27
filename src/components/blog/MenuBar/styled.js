@@ -25,7 +25,7 @@ export const Group = styled.div`
   flex-direction: column;
 `
 
-export const Link = styled(Link)`
+export const MenuLink = styled(Link)`
   display: block;
 `
 

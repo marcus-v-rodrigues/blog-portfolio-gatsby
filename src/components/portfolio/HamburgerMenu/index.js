@@ -1,5 +1,5 @@
 import React, { useRef, useState, useEffect} from 'react'
-import {TimelineMax} from "gsap"
+import gsap from "gsap"
 import * as S from "./styled"
 import links from "../../content"
 
@@ -23,7 +23,7 @@ const HamburgerMenu = () => {
     const [menuExpanded, setMenuExpanded] = useState(false)
 
     useEffect(()=>{
-        timeline.current = new TimelineMax({paused: true})
+        timeline.current = gsap.timeline({paused: true})
         .to(wrapper.current, 1.6, {
             top: "0%",
             ease: "power3"

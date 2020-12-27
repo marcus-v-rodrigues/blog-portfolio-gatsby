@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Link } from "gatsby"
 
-export const Link = styled(Link)`
+export const PostLink = styled(Link)`
   width:94%;
   margin: 0 0 1rem 3%;
   color: #8899a6;

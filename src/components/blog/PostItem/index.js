@@ -12,7 +12,7 @@ const PostItem = ({
     title,
     description,
 }) => (
-    <S.Link to={slug}>
+    <S.PostLink to={slug}>
         <S.Wrapper>
         <S.Tag background={background}>{category}</S.Tag>
             <S.Info>
@@ -23,7 +23,7 @@ const PostItem = ({
         <S.Description>{description}</S.Description>
             </S.Info>
         </S.Wrapper>
-    </S.Link>
+    </S.PostLink>
 )
 
 PostItem.propTypes = {

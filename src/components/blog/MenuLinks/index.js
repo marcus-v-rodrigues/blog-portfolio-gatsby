@@ -9,9 +9,9 @@ const MenuLinks = () => (
     <S.List>
       {links.map((link, i) => (
         <S.Item key={i}>
-          <S.Link to={link.url} activeClassName="active">
+          <S.MenuLink to={link.url} activeClassName="active">
             {link.label}
-          </S.Link>
+          </S.MenuLink>
         </S.Item>
       ))}
     </S.List>
