@@ -26,21 +26,24 @@ const HamburgerMenu = () => {
         timeline.current = gsap.timeline({paused: true})
         .to(wrapper.current, 1.6, {
             top: "0%",
-            ease: "power3"
+            ease: "slow"
         }, 0)
         .to(lineOne.current, 0.8, {
-            y: 16,
+            scaleX: 1.3,
+            top: "50%",
             rotation: 45,
             ease: "power3"
-        }, 0)
-        .to(lineThree.current, 0.8, {
-            y: -21,
-            rotation: -45,
-            ease: "power3",
         }, 0)
         .to(lineTwo.current, 0, { 
             autoAlpha: 0,
             ease: "power3"
+        }, 0)
+        .to(lineThree.current, 0.8, {
+            scaleX: 1.3,
+            bottom: "0%",
+            top: "50%",
+            rotation: -45,
+            ease: "power3",
         }, 0)
         .staggerFrom(menuItems.current, 1, {x: -200, opacity: 0, ease: "power3"}, 0.1)
         .reverse()
@@ -53,21 +56,20 @@ const HamburgerMenu = () => {
     },[menuExpanded])    
 
     useEffect(() => {
-        const node = menuItems.current
-        node.forEach(link => {
-            const sector = link.querySelector('a')
-            sector.addEventListener('mouseleave', e => {
+        menuItems.current.forEach(node => {
+            const link = node.querySelector('a')
+            link.addEventListener('mouseleave', e => {
     
                 // add class
-                sector.classList.add('animate-out')
+                link.classList.add('animate-out')
     
             })
-            sector.ontransitionend = function() {
+            link.ontransitionend = function() {
                 //remove class
-                sector.classList.remove('animate-out')
+                link.classList.remove('animate-out')
             }
         })   
-    },[menuItems.current])
+    },[])
 
     return (
         <>

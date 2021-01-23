@@ -1,5 +1,5 @@
 import React, { useRef, useEffect} from 'react'
-import {TimelineMax} from "gsap"
+import gsap from "gsap"
 import { graphql } from "gatsby"
 
 import Layout from "../components/blog/Layout"
@@ -28,8 +28,8 @@ const BlogList = props => {
     }
 
     useEffect(() => {
-        timeline.current = new TimelineMax()
-        .staggerFrom(postItems.current, 0.7, {x: -200, opacity: 0, ease: "power3"}, 0.2)
+        timeline.current = new gsap.timeline()
+        .staggerFrom(postItems.current, 0.7, {x: -200, opacity: 0, ease: "elastic"}, 0.2)
     },[])
 
     return (

@@ -1,11 +1,11 @@
 import styled from 'styled-components'
 
-export const LayoutWrapper = styled.section`
+export const Wrapper = styled.section`
   display: flex;
 `
 
-export const LayoutMain = styled.main`
-  background: linear-gradient(135deg, rgb(153, 17, 255), rgb(119, 0, 255));
+export const Main = styled.main`
+  background: var(--navy);
   min-height: 100vh;
   display: flex;
   flex-direction:column;
